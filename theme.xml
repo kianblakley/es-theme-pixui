@@ -49,14 +49,14 @@ Author: PIX3L
   
   <view name="system">
 
-    <image name="staticBackground">
+    <!-- <image name="staticBackground">
       <size>1 1</size>
       <pos>0 0</pos>
       <origin>0 0</origin>
       <tile>false</tile>
       <path>./assets/bg.png</path>
       <zIndex>0</zIndex>
-    </image>
+    </image> -->
 
     <image name="logo">
       <path>./art/${system.theme}.svg</path>
@@ -77,7 +77,7 @@ Author: PIX3L
 
     <carousel name="systemcarousel" extra="true">
       <type>vertical</type>
-      <pos>0.2 0.0625</pos><!-- 96px 28px -->
+      <pos>0 0.0625</pos><!-- 96px 28px -->
       <size>0.775 0.875</size><!-- 372px 280px -->
       <origin>0 0</origin>
       <color>00000000</color>
@@ -87,6 +87,7 @@ Author: PIX3L
       <logoSize>0.775 1</logoSize><!-- 372px -->
       <logoPos>0 0</logoPos>
       <fastScrolling>true</fastScrolling>
+      <scrollSound>./sounds/Move.ogg</scrollSound>
     </carousel>
 	
   </view>
@@ -99,28 +100,29 @@ Author: PIX3L
       <secondaryColor>${fontNormalColor}</secondaryColor>
       <fontPath>${bodyFont}</fontPath>
       <fontSize>0.05625</fontSize><!-- 18px -->
-      <pos>0.2 0.0875</pos>
-      <size>0.775 0.875</size>
+      <pos>0 0.0875</pos>
+      <size>1 0.875</size>
       <alignment>left</alignment>
       <horizontalMargin>0.05</horizontalMargin><!-- 24x -->
       <origin>0 0</origin>
       <lineSpacing>1.75</lineSpacing>
-      <selectorImagePath>./assets/selector_bar_basic.png</selectorImagePath>
+      <selectorImagePath>./assets/selector.png</selectorImagePath>
       <selectorOffsetY>-0.00625</selectorOffsetY>
       <selectorOffsetX>-0.05</selectorOffsetX>
       <selectorHeight>0.125</selectorHeight>
+      <scrollSound>./sounds/Move.ogg</scrollSound>
     </textlist>
 
 
     <text name="system_name" extra="true">
       <text>${system.fullName}</text>
       <fontPath>${bodyFont}</fontPath>
-      <forceUppercase>0</forceUppercase>
-      <pos>0.25 0.01875</pos><!-- 120px 6px -->
+      <forceUppercase>true</forceUppercase>
+      <pos>0.15 0.01</pos><!-- 120px 6px -->
       <size>0.75 0.05</size><!-- 360px 16px -->
       <color>ffffff</color>
-      <alignment>left</alignment>
-      <fontSize>0.05</fontSize><!-- 16x -->
+      <alignment>center</alignment>
+      <fontSize>0.05625</fontSize><!-- 16x -->
       <zIndex>2</zIndex>
     </text>
 
@@ -184,6 +186,8 @@ Author: PIX3L
       <padding>0.00625 0.00625 0 0</padding><!-- 3px 2px -->
       <animateSelection>false</animateSelection>
       <maxlength>0.5</maxlength>
+      <scrollSound>./sounds/Move.ogg</scrollSound>
+      <selectSound>./sounds/Select.ogg</selectSound>
     </imagegrid>
 
     <gridtile name="default">
